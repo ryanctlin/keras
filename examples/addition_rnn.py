@@ -84,6 +84,7 @@ MAXLEN = DIGITS + 1 + DIGITS
 # All the numbers, plus sign and space for padding.
 chars = '0123456789+ '
 ctable = CharacterTable(chars)
+print(ctable)
 
 questions = []
 expected = []
@@ -176,7 +177,7 @@ model.summary()
 
 # Train the model each generation and show predictions against the validation
 # dataset.
-for iteration in range(1, 200):
+for iteration in range(1, 10):
     print()
     print('-' * 50)
     print('Iteration', iteration)
@@ -200,3 +201,5 @@ for iteration in range(1, 200):
         else:
             print(colors.fail + '☒' + colors.close, end=' ')
         print(guess)
+
+#print(model.get_weights())
